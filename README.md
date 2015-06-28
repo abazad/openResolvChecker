@@ -8,7 +8,9 @@ Require:
  * nginx
 
 ## How to install
-    install perlbrew
+
+install perlbrew
+
     apt-get install perlbrew
     perlbrew init
     perlbrew install perl-5.16.3
@@ -18,11 +20,13 @@ Require:
     perlbrew use perl-5.16.3
 
 install mojolicious and perlmodules
+
     cpanm install Mojolicious
     cpanm install Net::DNS
     cpanm install IO::Socket::IP
 
 change to your nginx's config
+
     vi /etc/nginx/nginx.conf
         proxy_set_header Host            $host;
         proxy_set_header X-Real-IP       $remote_addr;
@@ -33,18 +37,22 @@ change to your nginx's config
         }
 
 set web page
+
     cp index.html /nginx's documentroot/
 
 
 ## How to use
 
  # restart nginx
+
     /etc/init.d/nginx restart
 
  # start application
+
     morbo myapp.pl
 
  # access your site
+
     http://yoursite/index.html 
 
 
