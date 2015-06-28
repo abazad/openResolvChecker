@@ -1,0 +1,33 @@
+<htlm>
+<head>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+  // <!--
+  function checkResolver(f) {
+  $("#result-dns-open-resolver").html('checking...');
+  $.getJSON("/check",{},function(result) {
+              switch (result.flag) {
+                case 3:
+                  $("#result-dns-open-resolver").html('please wait.');
+                  break;
+                case 2:
+                  $("#result-dns-open-resolver").html('unexpected error.');
+                  break;
+                case 1:
+                  $("#result-dns-open-resolver").html('Oops. RELAY...');
+                  break;
+                case 0:
+                  $("#result-dns-open-resolver").html('Good! SAFETY.');
+                  break;
+              }
+           });
+        }
+// -->
+</script>
+</head>
+<body>
+  <form id="f" action="#">
+   <input type="button" value="check" />
+   <div id="result-dns-open-resolver">
+  </div></form>
+</body>
