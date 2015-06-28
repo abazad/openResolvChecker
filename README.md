@@ -1,2 +1,3 @@
 # openResolvChecker
-DNS open resolver checker.
+
+open resolver check tool
