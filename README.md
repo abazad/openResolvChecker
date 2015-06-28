@@ -24,7 +24,6 @@ install mojolicious and perlmodules
 
 change to your nginx's config
  vi /etc/nginx/nginx.conf
- --- add lines of under to config ---
     proxy_set_header Host            $host;
     proxy_set_header X-Real-IP       $remote_addr;
     proxy_set_header X-Remote-Addr   $remote_addr;
@@ -32,7 +31,6 @@ change to your nginx's config
     location /check {
       proxy_pass http://127.0.0.1:3000/check;
     }
- ---
 
 set web page
  cp index.html /nginx's documentroot/
@@ -41,13 +39,13 @@ set web page
 ## How to use
 
  # restart nginx
- /etc/init.d/nginx restart
+  /etc/init.d/nginx restart
 
  # start application
- morbo myapp.pl
+  morbo myapp.pl
 
  # access your site
- http://yoursite/index.html 
+  http://yoursite/index.html 
 
 
 
