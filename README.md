@@ -53,7 +53,7 @@ set web page
 
  # access your site
 
-    http://yoursite/index.html 
+    http://yoursite/check/index.html 
 
 
 
